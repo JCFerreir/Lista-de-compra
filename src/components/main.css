@@ -1,0 +1,44 @@
+:root{
+    --azul-color: #1d7efd;
+    --laranja-color: #fd9e20;
+}
+
+.background-imagem{
+    background-image: url(/public/mercado.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.background-imagem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.conteudo-main{
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    font-family: 'Roboto Slab', serif;
+}
+
+.main{
+    width: 600px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 4px 100px rgba(0, 0, 0, 0.534);
+}
