@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Importe o useNavigate para redirecionar
 import { createUserWithEmailAndPassword } from "firebase/auth"; // Importe o método de criação de usuário
 import { auth } from "../firebaseConfig"; // Importe a configuração do Firebase
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouse } from '@fortawesome/free-solid-svg-icons';
 import './cadastro.css';
 
 const Cadastro = () => {
@@ -36,6 +39,11 @@ const Cadastro = () => {
         <section className="conteudo-login">
             <form onSubmit={handleCadastro}>
                 <fieldset>
+
+                <Link to="/">
+                        <FontAwesomeIcon icon={faHouse} />
+                </Link>
+
                     <legend>Faça o cadastro</legend>
 
                     <p>
@@ -89,6 +97,9 @@ const Cadastro = () => {
                     <p>
                         <button type="submit" className="btn btn-outline-success">Confirme</button>
                     </p>
+
+                    <p>Já tem uma conta? <Link to="/login">Entre</Link></p>
+
                 </fieldset>
             </form>
         </section>

@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth"; 
 import { auth } from "../firebaseConfig";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouse } from '@fortawesome/free-solid-svg-icons';
 import './login.css';
 
 const Login = () => {
@@ -25,6 +28,11 @@ const Login = () => {
             <section className="conteudo-login">
                 <form onSubmit={handleLogin}>
                     <fieldset>
+
+                    <Link to="/">
+                        <FontAwesomeIcon icon={faHouse} />
+                    </Link>
+
                         <legend>Faça o login</legend>
 
                         <p>
@@ -52,6 +60,8 @@ const Login = () => {
                         <p>
                             <button type="submit" className="btn btn-outline-success">Confirme</button>
                         </p>
+
+                        <p>Não tem cadastro? <Link to="/cadastro">Se cadastre-se</Link></p>
 
                     </fieldset>
                 </form>
