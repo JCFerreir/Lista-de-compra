@@ -4,7 +4,7 @@ import { auth } from "../firebaseConfig";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
+import { faSquareXmark } from '@fortawesome/free-solid-svg-icons';
 import './login.css';
 
 const Login = () => {
@@ -26,11 +26,11 @@ const Login = () => {
     return (
         <>
             <section className="conteudo-login">
-                <form onSubmit={handleLogin}>
+                <form className="formulario" onSubmit={handleLogin}>
                     <fieldset>
 
                     <Link to="/">
-                        <FontAwesomeIcon icon={faHouse} />
+                        <FontAwesomeIcon icon={faSquareXmark} />
                     </Link>
 
                         <legend>Faça o login</legend>

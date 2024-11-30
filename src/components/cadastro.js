@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Importe o useNavigate para redirecionar
-import { createUserWithEmailAndPassword } from "firebase/auth"; // Importe o método de criação de usuário
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth"; // Importe o método de criação de usuário
 import { auth } from "../firebaseConfig"; // Importe a configuração do Firebase
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,6 +12,7 @@ const Cadastro = () => {
     const [email, setEmail] = useState(''); // Estado para o email
     const [senha, setSenha] = useState(''); // Estado para a senha
     const [confirmaSenha, setConfirmaSenha] = useState(''); // Estado para confirmar senha
+    const [displayName, setDisplayName] = useState('');
     const navigate = useNavigate(); // Para redirecionar o usuário
 
     const handleCadastro = async (e) => {
@@ -27,9 +28,16 @@ const Cadastro = () => {
             // Cria o usuário com email e senha
             const userCredential = await createUserWithEmailAndPassword(auth, email, senha);
             console.log('Usuário criado:', userCredential.user);
+            const user = userCredential.user;
 
             // Redireciona o usuário para a página inicial após o cadastro
             navigate('/lista');
+
+            // Atualiza o displayName do usuário
+            await updateProfile(user, {
+                displayName: nome  // Definir o nome que o usuário inseriu
+            });
+
         } catch (error) {
             console.error('Erro ao fazer cadastro:', error);
         }

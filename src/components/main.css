@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    --verde-color: #2f615e;
+    --fundo-color: #fff7cc;
+    --branco-color: #fff;
+}
+
+
+
+.conteudo-main{
+    max-width: 1080px;
+    margin: 0 auto;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 10vh;
+}
+
+.logo{
+    background-image: url('/public/logo-semFundo.png');
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.conteudo-autenticacao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--branco-color);
+    width: 300px;
+    height: 200px;
+    border-radius: 30px;
+}
+
+.titulo-autenticacao{
+    background-color: var(--branco-color);
+}
+
+.metodo-autenticacao{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--branco-color);
+}
+
+.metodo-autenticacao a{
+    background-color: var(--branco-color);
+}
+
+.botoes-autenticacao{
+    width: 200px;
+    border-radius: 30px;
+    margin: 10px;
+}

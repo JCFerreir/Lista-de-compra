@@ -5,21 +5,22 @@ import { Link } from 'react-router-dom';
 const Main = () => {
     return (
         <>
-            <div className="background-imagem">
-                <section className="conteudo-main">
-                    <div className="main">
-                        <h1>Entre ou se cadastre-se:</h1>
-                        <div className="botoes-main">
+            <section className="conteudo-main">
+                <div className="main">
+                    <div className="logo"></div>
+                    <div className="conteudo-autenticacao">
+                        <h1 className="titulo-autenticacao">Entre ou se cadastre-se:</h1>
+                        <div className="metodo-autenticacao">
                             <Link to="/login">
-                                <button>Entrar</button>
+                                <button className="botoes-autenticacao">Entrar</button>
                             </Link>
                             <Link to="/cadastro">
-                                <button>Cadastrar</button>
+                                <button className="botoes-autenticacao">Cadastrar</button>
                             </Link>
                         </div>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </>
     );
 };
