@@ -4,19 +4,80 @@
     --verde-color: #2f615e;
     --fundo-color: #fff7cc;
     --branco-color: #fff;
+    --preto-color: #000;
 }
 
 .conteudo-login{
     max-width: 1080px;
     margin: 0 auto;
     font-family: 'Bebas Neue', sans-serif;
-    margin-top: 10vh;
+    margin-top: 15vh;
 }
 
-.formulario{
+.formulario-login{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
+
+.cor-formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--branco-color);
+    width: 300px;
+    height: 350px;
+    border-radius: 30px;
+}
+
+.botao-inicio{
+    display: flex;
+    justify-content: start;
+    background-color: var(--branco-color);
+    padding: 10px;
+    margin-right: 60%;
+    color: var(--preto-color);
+    font-size: 20px;
+}
+
+.titulo-login{
+    font-size: 30px;
+    background-color: var(--branco-color);
+}
+
+.input-label-login{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--branco-color);
+}
+
+.input-label-login label{
+    background-color: var(--branco-color);
+    display: flex;
+    justify-content: start;
+}
+
+.input-label-login input{
+    border-radius: 7px;
+    width: 200px;    
+}
+
+.input-label-login input::placeholder{
+    text-indent: 10px;
+}
+
+.botao-login{
+    width: 200px;
+    border-radius: 7px;
+}
+
+.link-cadastro{
+    background-color: var(--branco-color);
+}
+
+.link-cadastro p, a{
+    background-color: var(--branco-color);
+}
+

@@ -26,42 +26,47 @@ const Login = () => {
     return (
         <>
             <section className="conteudo-login">
-                <form className="formulario" onSubmit={handleLogin}>
-                    <fieldset>
+                <form className="formulario-login" onSubmit={handleLogin}>
+                    <fieldset className="cor-formulario">
 
-                    <Link to="/">
+                    <Link className="botao-inicio" to="/">
                         <FontAwesomeIcon icon={faSquareXmark} />
                     </Link>
 
-                        <legend>Faça o login</legend>
+                        <legend className="titulo-login">Faça o login</legend>
+
+                        <div className="input-label-login">
+                            <p>
+                                <label htmlFor="email-login">Seu email:</label> 
+                                
+                                <input
+                                    type="email"
+                                    name="email-login"
+                                    id="email-login"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder="email"/>
+                            </p>
+                            <p>
+                                <label htmlFor="senha-login">Sua senha:</label>
+                                
+                                <input
+                                    type="password"
+                                    name="senha-login"
+                                    id="senha-login"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    placeholder="password"/>
+                            </p>
+                        </div>
 
                         <p>
-                            <label htmlFor="email-login">Seu email:</label>
-                            <input 
-                                type="email" 
-                                name="email-login" 
-                                id="email-login" 
-                                value={email} 
-                                onChange={(e) => setEmail(e.target.value)} 
-                                placeholder="email"/>
+                            <button type="submit" className="botao-login">Entrar</button>
                         </p>
 
-                        <p>
-                            <label htmlFor="senha-login">Sua senha:</label>
-                            <input 
-                                type="password" 
-                                name="senha-login" 
-                                id="senha-login" 
-                                value={password} 
-                                onChange={(e) => setPassword(e.target.value)} 
-                                placeholder="password"/>
-                        </p>
-
-                        <p>
-                            <button type="submit" className="btn btn-outline-success">Confirme</button>
-                        </p>
-
-                        <p>Não tem cadastro? <Link to="/cadastro">Se cadastre-se</Link></p>
+                        <div className="link-cadastro">
+                            <p>Não tem cadastro? <Link to="/cadastro">Se cadastre-se</Link></p>
+                        </div>
 
                     </fieldset>
                 </form>

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    --verde-color: #2f615e;
+    --fundo-color: #fff7cc;
+    --branco-color: #fff;
+    --preto-color: #000;
+}
+
+.conteudo-cadastro{
+    max-width: 1080px;
+    margin: 0 auto;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-top: 15vh;
+}
+
+.formulario-cadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cor-cadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--branco-color);
+    width: 300px;
+    height: 500px;
+    border-radius: 30px;
+}
+
+.botao-inicio{
+    display: flex;
+    justify-content: start;
+    background-color: var(--branco-color);
+    padding: 10px;
+    margin-right: 60%;
+    color: var(--preto-color);
+    font-size: 20px;
+}
+
+.titulo-cadastro{
+    font-size: 30px;
+    background-color: var(--branco-color);
+}
+
+.input-label-cadastro{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--branco-color);
+}
+
+.input-label-cadastro label{
+    background-color: var(--branco-color);
+    display: flex;
+    justify-content: start;
+}
+
+.input-label-cadastro input{
+    border-radius: 7px;
+    width: 200px;    
+}
+
+.input-label-cadastro input::placeholder{
+    text-indent: 10px;
+}
+
+.botao-cadastro{
+    width: 200px;
+    border-radius: 7px;
+}
+
+.link-login{
+    background-color: var(--branco-color);
+}
+
+
+.link-login p,a{
+    background-color: var(--branco-color);
+}
+

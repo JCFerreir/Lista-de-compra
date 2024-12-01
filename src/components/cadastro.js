@@ -4,7 +4,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth"; /
 import { auth } from "../firebaseConfig"; // Importe a configuração do Firebase
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
+import { faSquareXmark } from '@fortawesome/free-solid-svg-icons';
 import './cadastro.css';
 
 const Cadastro = () => {
@@ -44,69 +44,70 @@ const Cadastro = () => {
     };
 
     return (
-        <section className="conteudo-login">
-            <form onSubmit={handleCadastro}>
-                <fieldset>
+        <section className="conteudo-cadastro">
+            <form className="formulario-cadastro" onSubmit={handleCadastro}>
+                <fieldset className="cor-cadastro">
 
-                <Link to="/">
-                        <FontAwesomeIcon icon={faHouse} />
+                <Link className="botao-inicio" to="/">
+                        <FontAwesomeIcon icon={faSquareXmark} />
                 </Link>
 
-                    <legend>Faça o cadastro</legend>
+                    <legend className="titulo-cadastro">Faça o cadastro</legend>
+
+                    <div className="input-label-cadastro">
+                        <p>
+                            <label htmlFor="nome-cadastro">Seu nome:</label>
+                            <input
+                                type="text"
+                                name="nome-cadastro"
+                                id="nome-cadastro"
+                                value={nome}
+                                onChange={(e) => setNome(e.target.value)}
+                                placeholder="Seu nome"
+                            />
+                        </p>
+                        <p>
+                            <label htmlFor="email-cadastro">Seu email:</label>
+                            <input
+                                type="email"
+                                name="email-cadastro"
+                                id="email-cadastro"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                placeholder="Seu email"
+                            />
+                        </p>
+                        <p>
+                            <label htmlFor="senha-cadastro">Sua senha:</label>
+                            <input
+                                type="password"
+                                name="senha-cadastro"
+                                id="senha-cadastro"
+                                value={senha}
+                                onChange={(e) => setSenha(e.target.value)}
+                                placeholder="Sua senha"
+                            />
+                        </p>
+                        <p>
+                            <label htmlFor="ConSenha-cadastro">Confirme sua senha:</label>
+                            <input
+                                type="password"
+                                name="ConSenha-cadastro"
+                                id="ConSenha-cadastro"
+                                value={confirmaSenha}
+                                onChange={(e) => setConfirmaSenha(e.target.value)}
+                                placeholder="Confirme sua senha"
+                            />
+                        </p>
+                    </div>
 
                     <p>
-                        <label htmlFor="nome-login">Seu nome:</label>
-                        <input 
-                            type="text" 
-                            name="nome-login" 
-                            id="nome-login" 
-                            value={nome} 
-                            onChange={(e) => setNome(e.target.value)} 
-                            placeholder="Seu nome" 
-                        />
+                        <button type="submit" className="botao-cadastro">Confirme</button>
                     </p>
 
-                    <p>
-                        <label htmlFor="email-login">Seu email:</label>
-                        <input 
-                            type="email" 
-                            name="email-login" 
-                            id="email-login" 
-                            value={email} 
-                            onChange={(e) => setEmail(e.target.value)} 
-                            placeholder="Seu email" 
-                        />
-                    </p>
-
-                    <p>
-                        <label htmlFor="senha-login">Sua senha:</label>
-                        <input 
-                            type="password" 
-                            name="senha-login" 
-                            id="senha-login" 
-                            value={senha} 
-                            onChange={(e) => setSenha(e.target.value)} 
-                            placeholder="Sua senha" 
-                        />
-                    </p>
-
-                    <p>
-                        <label htmlFor="ConSenha-login">Confirme sua senha:</label>
-                        <input 
-                            type="password" 
-                            name="ConSenha-login" 
-                            id="ConSenha-login" 
-                            value={confirmaSenha} 
-                            onChange={(e) => setConfirmaSenha(e.target.value)} 
-                            placeholder="Confirme sua senha" 
-                        />
-                    </p>
-
-                    <p>
-                        <button type="submit" className="btn btn-outline-success">Confirme</button>
-                    </p>
-
-                    <p>Já tem uma conta? <Link to="/login">Entre</Link></p>
+                    <div className="link-login">
+                        <p>Já tem uma conta? <Link to="/login">Entre</Link></p>
+                    </div>
 
                 </fieldset>
             </form>
