@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    --verde-color: #2f615e;
+    --fundo-color: #fff7cc;
+    --branco-color: #fff;
+    --preto-color: #000;
+}
+
+.conteudo-lista{
+    max-width: 1080px;
+    margin: 0 auto;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.botao-saida{
+    display: flex;
+    justify-content: end;
+    margin: 10px;
+    font-size: 35px;
+}
+
+.div-lista{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.cor-lista{
+    background-color: var(--branco-color);
+    width: 350px;
+    height: 550px;
+    border-radius: 30px;
+}
+
+.funcoes-lista{
+    background-color: var(--branco-color);
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.botao-adicionar-lista{
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.select-filtro{
+    margin: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    text-align: center;
+    border-width: 2px;
+    border-color: #000;
+}
+
+.modal-body{
+    background-color: var(--branco-color);
+}
+
+.conteudo-modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--branco-color);
+}
+
+.conteudo-modal label{
+    background-color: var(--branco-color);
+    font-size: 20px;
+}
+
+.conteudo-modal input{
+    width: 207px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.conteudo-modal select{
+    width: 207px;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #000;
+}
+
+
+
