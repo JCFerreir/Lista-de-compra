@@ -5,6 +5,7 @@
     --fundo-color: #fff7cc;
     --branco-color: #fff;
     --preto-color: #000;
+    --cinza-color: #252525;
 }
 
 .conteudo-lista{
@@ -29,8 +30,8 @@
 
 .cor-lista{
     background-color: var(--branco-color);
-    width: 350px;
-    height: 550px;
+    width: 400px;
+    height: 50px;
     border-radius: 30px;
 }
 
@@ -91,6 +92,33 @@
     border-width: 2px;
     border-color: #000;
 }
+
+.lista{
+    border-radius: 10px;
+    margin-top: 10px;
+    list-style: none;
+    padding: 10px;
+}
+
+.lista li{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--branco-color);
+}
+
+.lista li span{
+    background-color: var(--branco-color);
+}
+
+.botao-lixo{
+    margin-left: 80%;
+    font-size: 30px;
+}
+
 
 
 

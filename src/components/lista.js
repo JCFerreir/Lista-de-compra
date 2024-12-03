@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import './lista.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRightToBracket } from '@fortawesome/free-solid-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 
 const Lista = () => {
@@ -160,11 +161,12 @@ const Lista = () => {
                                 </div>
                             </div>
                         </div>
-                        <ul>
+                        <ul className="lista">
                             {itensFiltrados.map((item) => (
                                 <li key={item.id}>
-                                    {item.nome} - {item.categoria}
-                                    <button onClick={() => handleRemoveItem(item.id)}>Deletar</button>
+                                    {item.nome} <br />
+                                    <FontAwesomeIcon className="botao-lixo"  icon={faTrash}  onClick={() => handleRemoveItem(item.id)}/>
+                                    <span style={{color: 'gray'}}>{item.categoria}</span>
                                 </li>
                             ))}
                         </ul>
